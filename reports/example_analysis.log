@@ -38,34 +38,34 @@ Input [0;32mIn [31][0m, in [0;36m<cell line: 7>[0;34m()[0m
 [0;32m----> 7[0m [43msummary_table[49m[38;5;241;43m.[39;49m[43mto_excel[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mTable 1.xlsx[39;49m[38;5;124;43m'[39;49m[43m)[49m
 [1;32m      8[0m summary_table
 
-File [0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/core/generic.py:2357[0m, in [0;36mNDFrame.to_excel[0;34m(self, excel_writer, sheet_name, na_rep, float_format, columns, header, index, index_label, startrow, startcol, engine, merge_cells, encoding, inf_rep, verbose, freeze_panes, storage_options)[0m
-[1;32m   2344[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpandas[39;00m[38;5;21;01m.[39;00m[38;5;21;01mio[39;00m[38;5;21;01m.[39;00m[38;5;21;01mformats[39;00m[38;5;21;01m.[39;00m[38;5;21;01mexcel[39;00m [38;5;28;01mimport[39;00m ExcelFormatter
-[1;32m   2346[0m formatter [38;5;241m=[39m ExcelFormatter(
-[1;32m   2347[0m     df,
-[1;32m   2348[0m     na_rep[38;5;241m=[39mna_rep,
+File [0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/core/generic.py:2345[0m, in [0;36mNDFrame.to_excel[0;34m(self, excel_writer, sheet_name, na_rep, float_format, columns, header, index, index_label, startrow, startcol, engine, merge_cells, encoding, inf_rep, verbose, freeze_panes, storage_options)[0m
+[1;32m   2332[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpandas[39;00m[38;5;21;01m.[39;00m[38;5;21;01mio[39;00m[38;5;21;01m.[39;00m[38;5;21;01mformats[39;00m[38;5;21;01m.[39;00m[38;5;21;01mexcel[39;00m [38;5;28;01mimport[39;00m ExcelFormatter
+[1;32m   2334[0m formatter [38;5;241m=[39m ExcelFormatter(
+[1;32m   2335[0m     df,
+[1;32m   2336[0m     na_rep[38;5;241m=[39mna_rep,
 [0;32m   (...)[0m
-[1;32m   2355[0m     inf_rep[38;5;241m=[39minf_rep,
-[1;32m   2356[0m )
-[0;32m-> 2357[0m [43mformatter[49m[38;5;241;43m.[39;49m[43mwrite[49m[43m([49m
-[1;32m   2358[0m [43m    [49m[43mexcel_writer[49m[43m,[49m
-[1;32m   2359[0m [43m    [49m[43msheet_name[49m[38;5;241;43m=[39;49m[43msheet_name[49m[43m,[49m
-[1;32m   2360[0m [43m    [49m[43mstartrow[49m[38;5;241;43m=[39;49m[43mstartrow[49m[43m,[49m
-[1;32m   2361[0m [43m    [49m[43mstartcol[49m[38;5;241;43m=[39;49m[43mstartcol[49m[43m,[49m
-[1;32m   2362[0m [43m    [49m[43mfreeze_panes[49m[38;5;241;43m=[39;49m[43mfreeze_panes[49m[43m,[49m
-[1;32m   2363[0m [43m    [49m[43mengine[49m[38;5;241;43m=[39;49m[43mengine[49m[43m,[49m
-[1;32m   2364[0m [43m    [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[43mstorage_options[49m[43m,[49m
-[1;32m   2365[0m [43m[49m[43m)[49m
+[1;32m   2343[0m     inf_rep[38;5;241m=[39minf_rep,
+[1;32m   2344[0m )
+[0;32m-> 2345[0m [43mformatter[49m[38;5;241;43m.[39;49m[43mwrite[49m[43m([49m
+[1;32m   2346[0m [43m    [49m[43mexcel_writer[49m[43m,[49m
+[1;32m   2347[0m [43m    [49m[43msheet_name[49m[38;5;241;43m=[39;49m[43msheet_name[49m[43m,[49m
+[1;32m   2348[0m [43m    [49m[43mstartrow[49m[38;5;241;43m=[39;49m[43mstartrow[49m[43m,[49m
+[1;32m   2349[0m [43m    [49m[43mstartcol[49m[38;5;241;43m=[39;49m[43mstartcol[49m[43m,[49m
+[1;32m   2350[0m [43m    [49m[43mfreeze_panes[49m[38;5;241;43m=[39;49m[43mfreeze_panes[49m[43m,[49m
+[1;32m   2351[0m [43m    [49m[43mengine[49m[38;5;241;43m=[39;49m[43mengine[49m[43m,[49m
+[1;32m   2352[0m [43m    [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[43mstorage_options[49m[43m,[49m
+[1;32m   2353[0m [43m[49m[43m)[49m
 
-File [0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/io/formats/excel.py:886[0m, in [0;36mExcelFormatter.write[0;34m(self, writer, sheet_name, startrow, startcol, freeze_panes, engine, storage_options)[0m
-[1;32m    882[0m     need_save [38;5;241m=[39m [38;5;28;01mFalse[39;00m
-[1;32m    883[0m [38;5;28;01melse[39;00m:
-[1;32m    884[0m     [38;5;66;03m# error: Cannot instantiate abstract class 'ExcelWriter' with abstract[39;00m
-[1;32m    885[0m     [38;5;66;03m# attributes 'engine', 'save', 'supported_extensions' and 'write_cells'[39;00m
-[0;32m--> 886[0m     writer [38;5;241m=[39m [43mExcelWriter[49m[43m([49m[43m  [49m[38;5;66;43;03m# type: ignore[abstract][39;49;00m
-[1;32m    887[0m [43m        [49m[43mwriter[49m[43m,[49m[43m [49m[43mengine[49m[38;5;241;43m=[39;49m[43mengine[49m[43m,[49m[43m [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[43mstorage_options[49m
-[1;32m    888[0m [43m    [49m[43m)[49m
-[1;32m    889[0m     need_save [38;5;241m=[39m [38;5;28;01mTrue[39;00m
-[1;32m    891[0m [38;5;28;01mtry[39;00m:
+File [0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/io/formats/excel.py:888[0m, in [0;36mExcelFormatter.write[0;34m(self, writer, sheet_name, startrow, startcol, freeze_panes, engine, storage_options)[0m
+[1;32m    884[0m     need_save [38;5;241m=[39m [38;5;28;01mFalse[39;00m
+[1;32m    885[0m [38;5;28;01melse[39;00m:
+[1;32m    886[0m     [38;5;66;03m# error: Cannot instantiate abstract class 'ExcelWriter' with abstract[39;00m
+[1;32m    887[0m     [38;5;66;03m# attributes 'engine', 'save', 'supported_extensions' and 'write_cells'[39;00m
+[0;32m--> 888[0m     writer [38;5;241m=[39m [43mExcelWriter[49m[43m([49m[43m  [49m[38;5;66;43;03m# type: ignore[abstract][39;49;00m
+[1;32m    889[0m [43m        [49m[43mwriter[49m[43m,[49m[43m [49m[43mengine[49m[38;5;241;43m=[39;49m[43mengine[49m[43m,[49m[43m [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[43mstorage_options[49m
+[1;32m    890[0m [43m    [49m[43m)[49m
+[1;32m    891[0m     need_save [38;5;241m=[39m [38;5;28;01mTrue[39;00m
+[1;32m    893[0m [38;5;28;01mtry[39;00m:
 
 File [0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/io/excel/_openpyxl.py:49[0m, in [0;36mOpenpyxlWriter.__init__[0;34m(self, path, engine, date_format, datetime_format, mode, storage_options, if_sheet_exists, engine_kwargs, **kwargs)[0m
 [1;32m     36[0m [38;5;28;01mdef[39;00m [38;5;21m__init__[39m(
