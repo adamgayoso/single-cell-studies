@@ -1,88 +1,50 @@
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
     executenb(
-  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/client.py", line 1204, in execute
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/nbclient/client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/util.py", line 84, in wrapped
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/nbclient/util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/util.py", line 62, in just_run
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/nbclient/util.py", line 62, in just_run
     return loop.run_until_complete(coro)
-  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
     return future.result()
-  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/client.py", line 663, in async_execute
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/nbclient/client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/client.py", line 965, in async_execute_cell
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/nbclient/client.py", line 965, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-summary_table = pd.concat({
-    'Monthly statistics': monthly_stats.T,
-    'Top tissues': top_tissues.T,
-    'Top journals': top_journals.T
-}).T
-
-summary_table.to_excel('Table 1.xlsx')
-summary_table
+# plot number of studies over time
+p.options.figure_size = (9, 2)
+fig = (
+    p.ggplot(p.aes(x='Date', y='DOI'), data=df.resample('1M', on='Date').count()[['DOI']].reset_index())
+    + p.geom_bar(stat='identity')
+    + p.theme_minimal(base_family='Arial')
+    + p.scale_x_datetime(breaks=date_breaks('1 years'), labels=date_format('%Y'))
+    + p.labs(y='Number of studies')
+)
+fig.save('studies_over_time.pdf')
+print(fig)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Input [0;32mIn [31][0m, in [0;36m<cell line: 7>[0;34m()[0m
-[1;32m      1[0m summary_table [38;5;241m=[39m pd[38;5;241m.[39mconcat({
-[1;32m      2[0m     [38;5;124m'[39m[38;5;124mMonthly statistics[39m[38;5;124m'[39m: monthly_stats[38;5;241m.[39mT,
-[1;32m      3[0m     [38;5;124m'[39m[38;5;124mTop tissues[39m[38;5;124m'[39m: top_tissues[38;5;241m.[39mT,
-[1;32m      4[0m     [38;5;124m'[39m[38;5;124mTop journals[39m[38;5;124m'[39m: top_journals[38;5;241m.[39mT
-[1;32m      5[0m })[38;5;241m.[39mT
-[0;32m----> 7[0m [43msummary_table[49m[38;5;241;43m.[39;49m[43mto_excel[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mTable 1.xlsx[39;49m[38;5;124;43m'[39;49m[43m)[49m
-[1;32m      8[0m summary_table
+[0;31mTypeError[0m                                 Traceback (most recent call last)
+Input [0;32mIn [3][0m, in [0;36m<cell line: 4>[0;34m()[0m
+[1;32m      1[0m [38;5;66;03m# plot number of studies over time[39;00m
+[1;32m      2[0m p[38;5;241m.[39moptions[38;5;241m.[39mfigure_size [38;5;241m=[39m ([38;5;241m9[39m, [38;5;241m2[39m)
+[1;32m      3[0m fig [38;5;241m=[39m (
+[0;32m----> 4[0m     [43mp[49m[38;5;241;43m.[39;49m[43mggplot[49m[43m([49m[43mp[49m[38;5;241;43m.[39;49m[43maes[49m[43m([49m[43mx[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mDate[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43my[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mDOI[39;49m[38;5;124;43m'[39;49m[43m)[49m[43m,[49m[43m [49m[43mdata[49m[38;5;241;43m=[39;49m[43mdf[49m[38;5;241;43m.[39;49m[43mresample[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43m1M[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mon[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mDate[39;49m[38;5;124;43m'[39;49m[43m)[49m[38;5;241;43m.[39;49m[43mcount[49m[43m([49m[43m)[49m[43m[[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mDOI[39;49m[38;5;124;43m'[39;49m[43m][49m[43m][49m[38;5;241;43m.[39;49m[43mreset_index[49m[43m([49m[43m)[49m[43m)[49m
+[1;32m      5[0m     [38;5;241m+[39m p[38;5;241m.[39mgeom_bar(stat[38;5;241m=[39m[38;5;124m'[39m[38;5;124midentity[39m[38;5;124m'[39m)
+[1;32m      6[0m     [38;5;241m+[39m p[38;5;241m.[39mtheme_minimal(base_family[38;5;241m=[39m[38;5;124m'[39m[38;5;124mArial[39m[38;5;124m'[39m)
+[1;32m      7[0m     [38;5;241m+[39m p[38;5;241m.[39mscale_x_datetime(breaks[38;5;241m=[39mdate_breaks([38;5;124m'[39m[38;5;124m1 years[39m[38;5;124m'[39m), labels[38;5;241m=[39mdate_format([38;5;124m'[39m[38;5;124m%[39m[38;5;124mY[39m[38;5;124m'[39m))
+[1;32m      8[0m     [38;5;241m+[39m p[38;5;241m.[39mlabs(y[38;5;241m=[39m[38;5;124m'[39m[38;5;124mNumber of studies[39m[38;5;124m'[39m)
+[1;32m      9[0m )
+[1;32m     10[0m fig[38;5;241m.[39msave([38;5;124m'[39m[38;5;124mstudies_over_time.pdf[39m[38;5;124m'[39m)
+[1;32m     11[0m [38;5;28mprint[39m(fig)
 
-File [0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/core/generic.py:2345[0m, in [0;36mNDFrame.to_excel[0;34m(self, excel_writer, sheet_name, na_rep, float_format, columns, header, index, index_label, startrow, startcol, engine, merge_cells, encoding, inf_rep, verbose, freeze_panes, storage_options)[0m
-[1;32m   2332[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpandas[39;00m[38;5;21;01m.[39;00m[38;5;21;01mio[39;00m[38;5;21;01m.[39;00m[38;5;21;01mformats[39;00m[38;5;21;01m.[39;00m[38;5;21;01mexcel[39;00m [38;5;28;01mimport[39;00m ExcelFormatter
-[1;32m   2334[0m formatter [38;5;241m=[39m ExcelFormatter(
-[1;32m   2335[0m     df,
-[1;32m   2336[0m     na_rep[38;5;241m=[39mna_rep,
-[0;32m   (...)[0m
-[1;32m   2343[0m     inf_rep[38;5;241m=[39minf_rep,
-[1;32m   2344[0m )
-[0;32m-> 2345[0m [43mformatter[49m[38;5;241;43m.[39;49m[43mwrite[49m[43m([49m
-[1;32m   2346[0m [43m    [49m[43mexcel_writer[49m[43m,[49m
-[1;32m   2347[0m [43m    [49m[43msheet_name[49m[38;5;241;43m=[39;49m[43msheet_name[49m[43m,[49m
-[1;32m   2348[0m [43m    [49m[43mstartrow[49m[38;5;241;43m=[39;49m[43mstartrow[49m[43m,[49m
-[1;32m   2349[0m [43m    [49m[43mstartcol[49m[38;5;241;43m=[39;49m[43mstartcol[49m[43m,[49m
-[1;32m   2350[0m [43m    [49m[43mfreeze_panes[49m[38;5;241;43m=[39;49m[43mfreeze_panes[49m[43m,[49m
-[1;32m   2351[0m [43m    [49m[43mengine[49m[38;5;241;43m=[39;49m[43mengine[49m[43m,[49m
-[1;32m   2352[0m [43m    [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[43mstorage_options[49m[43m,[49m
-[1;32m   2353[0m [43m[49m[43m)[49m
-
-File [0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/io/formats/excel.py:888[0m, in [0;36mExcelFormatter.write[0;34m(self, writer, sheet_name, startrow, startcol, freeze_panes, engine, storage_options)[0m
-[1;32m    884[0m     need_save [38;5;241m=[39m [38;5;28;01mFalse[39;00m
-[1;32m    885[0m [38;5;28;01melse[39;00m:
-[1;32m    886[0m     [38;5;66;03m# error: Cannot instantiate abstract class 'ExcelWriter' with abstract[39;00m
-[1;32m    887[0m     [38;5;66;03m# attributes 'engine', 'save', 'supported_extensions' and 'write_cells'[39;00m
-[0;32m--> 888[0m     writer [38;5;241m=[39m [43mExcelWriter[49m[43m([49m[43m  [49m[38;5;66;43;03m# type: ignore[abstract][39;49;00m
-[1;32m    889[0m [43m        [49m[43mwriter[49m[43m,[49m[43m [49m[43mengine[49m[38;5;241;43m=[39;49m[43mengine[49m[43m,[49m[43m [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[43mstorage_options[49m
-[1;32m    890[0m [43m    [49m[43m)[49m
-[1;32m    891[0m     need_save [38;5;241m=[39m [38;5;28;01mTrue[39;00m
-[1;32m    893[0m [38;5;28;01mtry[39;00m:
-
-File [0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/io/excel/_openpyxl.py:49[0m, in [0;36mOpenpyxlWriter.__init__[0;34m(self, path, engine, date_format, datetime_format, mode, storage_options, if_sheet_exists, engine_kwargs, **kwargs)[0m
-[1;32m     36[0m [38;5;28;01mdef[39;00m [38;5;21m__init__[39m(
-[1;32m     37[0m     [38;5;28mself[39m,
-[1;32m     38[0m     path,
-[0;32m   (...)[0m
-[1;32m     47[0m ):
-[1;32m     48[0m     [38;5;66;03m# Use the openpyxl module as the Excel writer.[39;00m
-[0;32m---> 49[0m     [38;5;28;01mfrom[39;00m [38;5;21;01mopenpyxl[39;00m[38;5;21;01m.[39;00m[38;5;21;01mworkbook[39;00m [38;5;28;01mimport[39;00m Workbook
-[1;32m     51[0m     engine_kwargs [38;5;241m=[39m combine_kwargs(engine_kwargs, kwargs)
-[1;32m     53[0m     [38;5;28msuper[39m()[38;5;241m.[39m[38;5;21m__init__[39m(
-[1;32m     54[0m         path,
-[1;32m     55[0m         mode[38;5;241m=[39mmode,
-[0;32m   (...)[0m
-[1;32m     58[0m         engine_kwargs[38;5;241m=[39mengine_kwargs,
-[1;32m     59[0m     )
-
-[0;31mModuleNotFoundError[0m: No module named 'openpyxl'
-ModuleNotFoundError: No module named 'openpyxl'
+[0;31mTypeError[0m: __init__() got multiple values for argument 'data'
+TypeError: __init__() got multiple values for argument 'data'
 
