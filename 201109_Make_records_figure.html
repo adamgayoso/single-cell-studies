@@ -913,7 +913,7 @@ Populating the interactive namespace from numpy and matplotlib
       <td>True</td>
     </tr>
     <tr>
-      <th>1858</th>
+      <th>1865</th>
       <td>Langlieb et al bioRxiv</td>
       <td>10.1101/2023.03.06.531307</td>
       <td>Jonah Langlieb, Nina Sachdev, Karol Balderrama...</td>
@@ -937,7 +937,7 @@ Populating the interactive namespace from numpy and matplotlib
       <td>True</td>
     </tr>
     <tr>
-      <th>1862</th>
+      <th>1869</th>
       <td>Qiu et al bioRxiv</td>
       <td>10.1101/2023.04.05.535726</td>
       <td>Chengxiang Qiu, Beth K. Martin, Ian C. Welsh, ...</td>
@@ -992,7 +992,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1702, 29)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1712, 29)
 </pre></div>
 </div>
 </div>
@@ -1014,144 +1014,11 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3652,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3651</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3652</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3653</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:147,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:176,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:2606,</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
-
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:2630,</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
-
-<span class="ne">KeyError</span>: 0
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/core/formatters.py:708,</span> in <span class="ni">PlainTextFormatter.__call__</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="n">printer</span> <span class="o">=</span> <span class="n">pretty</span><span class="o">.</span><span class="n">RepresentationPrinter</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>     <span class="bp">self</span><span class="o">.</span><span class="n">max_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">newline</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">max_seq_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_seq_length</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">singleton_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">singleton_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">type_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">deferred_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">deferred_printers</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">708</span> <span class="n">printer</span><span class="o">.</span><span class="n">pretty</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span> <span class="n">printer</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span> <span class="k">return</span> <span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:410,</span> in <span class="ni">RepresentationPrinter.pretty</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">407</span>                         <span class="k">return</span> <span class="n">meth</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span>                 <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">object</span> \
-<span class="g g-Whitespace">    </span><span class="mi">409</span>                         <span class="ow">and</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__repr__&#39;</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">410</span>                     <span class="k">return</span> <span class="n">_repr_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">412</span>     <span class="k">return</span> <span class="n">_default_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:778,</span> in <span class="ni">_repr_pprint</span><span class="nt">(obj, p, cycle)</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;A pprint that just redirects to the normal repr function.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span> <span class="c1"># Find newlines and replace them with p.break_()</span>
-<span class="ne">--&gt; </span><span class="mi">778</span> <span class="n">output</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">780</span> <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">():</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:95,</span> in <span class="ni">ggplot.__repr__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">95</span>     <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">return</span> <span class="s1">&#39;&lt;ggplot: (</span><span class="si">%d</span><span class="s1">)&gt;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:86,</span> in <span class="ni">ggplot.__str__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">86</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="c1"># Return and empty string so that print(p) is &quot;pretty&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:203,</span> in <span class="ni">ggplot.draw</span><span class="nt">(self, return_ggplot, show)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="bp">self</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span> <span class="k">with</span> <span class="n">plot_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="n">show</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_build</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="c1"># setup</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="n">figure</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_figure</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:292,</span> in <span class="ni">ggplot._build</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">289</span> <span class="n">layers</span><span class="o">.</span><span class="n">compute_aesthetics</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">291</span> <span class="c1"># Transform data using all scales</span>
-<span class="ne">--&gt; </span><span class="mi">292</span> <span class="n">layers</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">294</span> <span class="c1"># Make sure missing (but required) aesthetics are added</span>
-<span class="g g-Whitespace">    </span><span class="mi">295</span> <span class="n">scales</span><span class="o">.</span><span class="n">add_missing</span><span class="p">((</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">))</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:87,</span> in <span class="ni">Layers.transform</span><span class="nt">(self, scales)</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span> <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scales</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">87</span>         <span class="n">l</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">scales</span><span class="o">.</span><span class="n">transform_df</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scales.py:218,</span> in <span class="ni">Scales.transform_df</span><span class="nt">(self, df)</span>
-<span class="g g-Whitespace">    </span><span class="mi">216</span> <span class="c1"># Each scale transforms the columns it understands</span>
-<span class="g g-Whitespace">    </span><span class="mi">217</span> <span class="k">for</span> <span class="n">sc</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">218</span>     <span class="n">df</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="k">return</span> <span class="n">df</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:715,</span> in <span class="ni">scale_continuous.transform_df</span><span class="nt">(self, df)</span>
-<span class="g g-Whitespace">    </span><span class="mi">713</span> <span class="k">for</span> <span class="n">ae</span> <span class="ow">in</span> <span class="n">aesthetics</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">714</span>     <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">715</span>         <span class="n">df</span><span class="p">[</span><span class="n">ae</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">ae</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">717</span> <span class="k">return</span> <span class="n">df</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:724,</span> in <span class="ni">scale_continuous.transform</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">720</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">721</span><span class="sd"> Transform array|series x</span>
-<span class="g g-Whitespace">    </span><span class="mi">722</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">723</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">724</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">725</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/transforms.py:647,</span> in <span class="ni">datetime_trans.transform</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">644</span>     <span class="k">return</span> <span class="p">[]</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">647</span>     <span class="n">tz</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tzinfo</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span>     <span class="n">tz</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">tzinfo</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/series.py:1012,</span> in <span class="ni">Series.__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1009</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1011</span> <span class="k">elif</span> <span class="n">key_is_scalar</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1012</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_value</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1014</span> <span class="k">if</span> <span class="n">is_hashable</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="c1"># Otherwise index.get_value will raise InvalidIndexError</span>
-<span class="g g-Whitespace">   </span><span class="mi">1016</span>     <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1017</span>         <span class="c1"># For labels that don&#39;t resolve as scalars like tuples and frozensets</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/series.py:1121,</span> in <span class="ni">Series._get_value</span><span class="nt">(self, label, takeable)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1118</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1120</span> <span class="c1"># Similar to Index.get_value, but we do not fall back to positional</span>
-<span class="ne">-&gt; </span><span class="mi">1121</span> <span class="n">loc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1123</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">loc</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1124</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3654,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3652</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3653</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3654</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3655</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3656</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3657</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3658</span>     <span class="c1">#  the TypeError.</span>
-<span class="g g-Whitespace">   </span><span class="mi">3659</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-
-<span class="ne">KeyError</span>: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 382 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/3b083620872a968684635a0bc249290b7db082515e3bb6c64376c9b68417ee21.png" src="_images/3b083620872a968684635a0bc249290b7db082515e3bb6c64376c9b68417ee21.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8727447243255)&gt;
 </pre></div>
 </div>
 </div>
@@ -1174,144 +1041,11 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3652,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3651</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3652</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3653</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:147,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:176,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:2606,</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
-
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:2630,</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
-
-<span class="ne">KeyError</span>: 0
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/core/formatters.py:708,</span> in <span class="ni">PlainTextFormatter.__call__</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="n">printer</span> <span class="o">=</span> <span class="n">pretty</span><span class="o">.</span><span class="n">RepresentationPrinter</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>     <span class="bp">self</span><span class="o">.</span><span class="n">max_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">newline</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">max_seq_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_seq_length</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">singleton_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">singleton_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">type_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">deferred_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">deferred_printers</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">708</span> <span class="n">printer</span><span class="o">.</span><span class="n">pretty</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span> <span class="n">printer</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span> <span class="k">return</span> <span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:410,</span> in <span class="ni">RepresentationPrinter.pretty</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">407</span>                         <span class="k">return</span> <span class="n">meth</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span>                 <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">object</span> \
-<span class="g g-Whitespace">    </span><span class="mi">409</span>                         <span class="ow">and</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__repr__&#39;</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">410</span>                     <span class="k">return</span> <span class="n">_repr_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">412</span>     <span class="k">return</span> <span class="n">_default_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:778,</span> in <span class="ni">_repr_pprint</span><span class="nt">(obj, p, cycle)</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;A pprint that just redirects to the normal repr function.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span> <span class="c1"># Find newlines and replace them with p.break_()</span>
-<span class="ne">--&gt; </span><span class="mi">778</span> <span class="n">output</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">780</span> <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">():</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:95,</span> in <span class="ni">ggplot.__repr__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">95</span>     <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">return</span> <span class="s1">&#39;&lt;ggplot: (</span><span class="si">%d</span><span class="s1">)&gt;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:86,</span> in <span class="ni">ggplot.__str__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">86</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="c1"># Return and empty string so that print(p) is &quot;pretty&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:203,</span> in <span class="ni">ggplot.draw</span><span class="nt">(self, return_ggplot, show)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="bp">self</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span> <span class="k">with</span> <span class="n">plot_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="n">show</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_build</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="c1"># setup</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="n">figure</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_figure</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:292,</span> in <span class="ni">ggplot._build</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">289</span> <span class="n">layers</span><span class="o">.</span><span class="n">compute_aesthetics</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">291</span> <span class="c1"># Transform data using all scales</span>
-<span class="ne">--&gt; </span><span class="mi">292</span> <span class="n">layers</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">294</span> <span class="c1"># Make sure missing (but required) aesthetics are added</span>
-<span class="g g-Whitespace">    </span><span class="mi">295</span> <span class="n">scales</span><span class="o">.</span><span class="n">add_missing</span><span class="p">((</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">))</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:87,</span> in <span class="ni">Layers.transform</span><span class="nt">(self, scales)</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span> <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scales</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">87</span>         <span class="n">l</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">scales</span><span class="o">.</span><span class="n">transform_df</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scales.py:218,</span> in <span class="ni">Scales.transform_df</span><span class="nt">(self, df)</span>
-<span class="g g-Whitespace">    </span><span class="mi">216</span> <span class="c1"># Each scale transforms the columns it understands</span>
-<span class="g g-Whitespace">    </span><span class="mi">217</span> <span class="k">for</span> <span class="n">sc</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">218</span>     <span class="n">df</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="k">return</span> <span class="n">df</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:715,</span> in <span class="ni">scale_continuous.transform_df</span><span class="nt">(self, df)</span>
-<span class="g g-Whitespace">    </span><span class="mi">713</span> <span class="k">for</span> <span class="n">ae</span> <span class="ow">in</span> <span class="n">aesthetics</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">714</span>     <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">715</span>         <span class="n">df</span><span class="p">[</span><span class="n">ae</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">ae</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">717</span> <span class="k">return</span> <span class="n">df</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:724,</span> in <span class="ni">scale_continuous.transform</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">720</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">721</span><span class="sd"> Transform array|series x</span>
-<span class="g g-Whitespace">    </span><span class="mi">722</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">723</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">724</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">725</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/transforms.py:647,</span> in <span class="ni">datetime_trans.transform</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">644</span>     <span class="k">return</span> <span class="p">[]</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">647</span>     <span class="n">tz</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tzinfo</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span>     <span class="n">tz</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">tzinfo</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/series.py:1012,</span> in <span class="ni">Series.__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1009</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1011</span> <span class="k">elif</span> <span class="n">key_is_scalar</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1012</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_value</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1014</span> <span class="k">if</span> <span class="n">is_hashable</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="c1"># Otherwise index.get_value will raise InvalidIndexError</span>
-<span class="g g-Whitespace">   </span><span class="mi">1016</span>     <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1017</span>         <span class="c1"># For labels that don&#39;t resolve as scalars like tuples and frozensets</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/series.py:1121,</span> in <span class="ni">Series._get_value</span><span class="nt">(self, label, takeable)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1118</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1120</span> <span class="c1"># Similar to Index.get_value, but we do not fall back to positional</span>
-<span class="ne">-&gt; </span><span class="mi">1121</span> <span class="n">loc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1123</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">loc</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1124</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3654,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3652</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3653</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3654</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3655</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3656</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3657</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3658</span>     <span class="c1">#  the TypeError.</span>
-<span class="g g-Whitespace">   </span><span class="mi">3659</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-
-<span class="ne">KeyError</span>: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 382 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/3b083620872a968684635a0bc249290b7db082515e3bb6c64376c9b68417ee21.png" src="_images/3b083620872a968684635a0bc249290b7db082515e3bb6c64376c9b68417ee21.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8727447090679)&gt;
 </pre></div>
 </div>
 </div>
@@ -1335,144 +1069,12 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3652,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3651</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3652</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3653</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:147,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:176,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:2606,</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
-
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:2630,</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
-
-<span class="ne">KeyError</span>: 0
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/core/formatters.py:708,</span> in <span class="ni">PlainTextFormatter.__call__</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="n">printer</span> <span class="o">=</span> <span class="n">pretty</span><span class="o">.</span><span class="n">RepresentationPrinter</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>     <span class="bp">self</span><span class="o">.</span><span class="n">max_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">newline</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">max_seq_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_seq_length</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">singleton_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">singleton_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">type_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">deferred_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">deferred_printers</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">708</span> <span class="n">printer</span><span class="o">.</span><span class="n">pretty</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span> <span class="n">printer</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span> <span class="k">return</span> <span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:410,</span> in <span class="ni">RepresentationPrinter.pretty</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">407</span>                         <span class="k">return</span> <span class="n">meth</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span>                 <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">object</span> \
-<span class="g g-Whitespace">    </span><span class="mi">409</span>                         <span class="ow">and</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__repr__&#39;</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">410</span>                     <span class="k">return</span> <span class="n">_repr_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">412</span>     <span class="k">return</span> <span class="n">_default_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:778,</span> in <span class="ni">_repr_pprint</span><span class="nt">(obj, p, cycle)</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;A pprint that just redirects to the normal repr function.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span> <span class="c1"># Find newlines and replace them with p.break_()</span>
-<span class="ne">--&gt; </span><span class="mi">778</span> <span class="n">output</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">780</span> <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">():</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:95,</span> in <span class="ni">ggplot.__repr__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">95</span>     <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">return</span> <span class="s1">&#39;&lt;ggplot: (</span><span class="si">%d</span><span class="s1">)&gt;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:86,</span> in <span class="ni">ggplot.__str__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">86</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="c1"># Return and empty string so that print(p) is &quot;pretty&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:203,</span> in <span class="ni">ggplot.draw</span><span class="nt">(self, return_ggplot, show)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="bp">self</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span> <span class="k">with</span> <span class="n">plot_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="n">show</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_build</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="c1"># setup</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="n">figure</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_figure</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:292,</span> in <span class="ni">ggplot._build</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">289</span> <span class="n">layers</span><span class="o">.</span><span class="n">compute_aesthetics</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">291</span> <span class="c1"># Transform data using all scales</span>
-<span class="ne">--&gt; </span><span class="mi">292</span> <span class="n">layers</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">294</span> <span class="c1"># Make sure missing (but required) aesthetics are added</span>
-<span class="g g-Whitespace">    </span><span class="mi">295</span> <span class="n">scales</span><span class="o">.</span><span class="n">add_missing</span><span class="p">((</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">))</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:87,</span> in <span class="ni">Layers.transform</span><span class="nt">(self, scales)</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span> <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scales</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">87</span>         <span class="n">l</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">scales</span><span class="o">.</span><span class="n">transform_df</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scales.py:218,</span> in <span class="ni">Scales.transform_df</span><span class="nt">(self, df)</span>
-<span class="g g-Whitespace">    </span><span class="mi">216</span> <span class="c1"># Each scale transforms the columns it understands</span>
-<span class="g g-Whitespace">    </span><span class="mi">217</span> <span class="k">for</span> <span class="n">sc</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">218</span>     <span class="n">df</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="k">return</span> <span class="n">df</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:715,</span> in <span class="ni">scale_continuous.transform_df</span><span class="nt">(self, df)</span>
-<span class="g g-Whitespace">    </span><span class="mi">713</span> <span class="k">for</span> <span class="n">ae</span> <span class="ow">in</span> <span class="n">aesthetics</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">714</span>     <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">715</span>         <span class="n">df</span><span class="p">[</span><span class="n">ae</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">ae</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">717</span> <span class="k">return</span> <span class="n">df</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:724,</span> in <span class="ni">scale_continuous.transform</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">720</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">721</span><span class="sd"> Transform array|series x</span>
-<span class="g g-Whitespace">    </span><span class="mi">722</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">723</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">724</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">725</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/transforms.py:647,</span> in <span class="ni">datetime_trans.transform</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">644</span>     <span class="k">return</span> <span class="p">[]</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">647</span>     <span class="n">tz</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tzinfo</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span>     <span class="n">tz</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">tzinfo</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/series.py:1012,</span> in <span class="ni">Series.__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1009</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1011</span> <span class="k">elif</span> <span class="n">key_is_scalar</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1012</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_value</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1014</span> <span class="k">if</span> <span class="n">is_hashable</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="c1"># Otherwise index.get_value will raise InvalidIndexError</span>
-<span class="g g-Whitespace">   </span><span class="mi">1016</span>     <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1017</span>         <span class="c1"># For labels that don&#39;t resolve as scalars like tuples and frozensets</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/series.py:1121,</span> in <span class="ni">Series._get_value</span><span class="nt">(self, label, takeable)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1118</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1120</span> <span class="c1"># Similar to Index.get_value, but we do not fall back to positional</span>
-<span class="ne">-&gt; </span><span class="mi">1121</span> <span class="n">loc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1123</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">loc</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1124</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3654,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3652</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3653</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3654</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3655</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3656</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3657</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3658</span>     <span class="c1">#  the TypeError.</span>
-<span class="g g-Whitespace">   </span><span class="mi">3659</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-
-<span class="ne">KeyError</span>: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 382 rows containing missing values.
+/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 1 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/e78c30bd27d66040dc6cddde8b52f2c1c9c5365d604d79c470b50ac1e1b7fbb3.png" src="_images/e78c30bd27d66040dc6cddde8b52f2c1c9c5365d604d79c470b50ac1e1b7fbb3.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8727447234594)&gt;
 </pre></div>
 </div>
 </div>
@@ -1502,144 +1104,13 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3652,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3651</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3652</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3653</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:147,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:176,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:2606,</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
-
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:2630,</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
-
-<span class="ne">KeyError</span>: 0
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/core/formatters.py:708,</span> in <span class="ni">PlainTextFormatter.__call__</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="n">printer</span> <span class="o">=</span> <span class="n">pretty</span><span class="o">.</span><span class="n">RepresentationPrinter</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>     <span class="bp">self</span><span class="o">.</span><span class="n">max_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">newline</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">max_seq_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_seq_length</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">singleton_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">singleton_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">type_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">deferred_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">deferred_printers</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">708</span> <span class="n">printer</span><span class="o">.</span><span class="n">pretty</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span> <span class="n">printer</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span> <span class="k">return</span> <span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:410,</span> in <span class="ni">RepresentationPrinter.pretty</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">407</span>                         <span class="k">return</span> <span class="n">meth</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span>                 <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">object</span> \
-<span class="g g-Whitespace">    </span><span class="mi">409</span>                         <span class="ow">and</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__repr__&#39;</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">410</span>                     <span class="k">return</span> <span class="n">_repr_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">412</span>     <span class="k">return</span> <span class="n">_default_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:778,</span> in <span class="ni">_repr_pprint</span><span class="nt">(obj, p, cycle)</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;A pprint that just redirects to the normal repr function.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span> <span class="c1"># Find newlines and replace them with p.break_()</span>
-<span class="ne">--&gt; </span><span class="mi">778</span> <span class="n">output</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">780</span> <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">():</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:95,</span> in <span class="ni">ggplot.__repr__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">95</span>     <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">return</span> <span class="s1">&#39;&lt;ggplot: (</span><span class="si">%d</span><span class="s1">)&gt;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:86,</span> in <span class="ni">ggplot.__str__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">86</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="c1"># Return and empty string so that print(p) is &quot;pretty&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:203,</span> in <span class="ni">ggplot.draw</span><span class="nt">(self, return_ggplot, show)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="bp">self</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span> <span class="k">with</span> <span class="n">plot_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="n">show</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_build</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="c1"># setup</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="n">figure</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_figure</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:292,</span> in <span class="ni">ggplot._build</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">289</span> <span class="n">layers</span><span class="o">.</span><span class="n">compute_aesthetics</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">291</span> <span class="c1"># Transform data using all scales</span>
-<span class="ne">--&gt; </span><span class="mi">292</span> <span class="n">layers</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">294</span> <span class="c1"># Make sure missing (but required) aesthetics are added</span>
-<span class="g g-Whitespace">    </span><span class="mi">295</span> <span class="n">scales</span><span class="o">.</span><span class="n">add_missing</span><span class="p">((</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">))</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:87,</span> in <span class="ni">Layers.transform</span><span class="nt">(self, scales)</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span> <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scales</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">87</span>         <span class="n">l</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">scales</span><span class="o">.</span><span class="n">transform_df</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scales.py:218,</span> in <span class="ni">Scales.transform_df</span><span class="nt">(self, df)</span>
-<span class="g g-Whitespace">    </span><span class="mi">216</span> <span class="c1"># Each scale transforms the columns it understands</span>
-<span class="g g-Whitespace">    </span><span class="mi">217</span> <span class="k">for</span> <span class="n">sc</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">218</span>     <span class="n">df</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="k">return</span> <span class="n">df</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:715,</span> in <span class="ni">scale_continuous.transform_df</span><span class="nt">(self, df)</span>
-<span class="g g-Whitespace">    </span><span class="mi">713</span> <span class="k">for</span> <span class="n">ae</span> <span class="ow">in</span> <span class="n">aesthetics</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">714</span>     <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">715</span>         <span class="n">df</span><span class="p">[</span><span class="n">ae</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">ae</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">717</span> <span class="k">return</span> <span class="n">df</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:724,</span> in <span class="ni">scale_continuous.transform</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">720</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">721</span><span class="sd"> Transform array|series x</span>
-<span class="g g-Whitespace">    </span><span class="mi">722</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">723</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">724</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">725</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/transforms.py:647,</span> in <span class="ni">datetime_trans.transform</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">644</span>     <span class="k">return</span> <span class="p">[]</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">647</span>     <span class="n">tz</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tzinfo</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span>     <span class="n">tz</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">tzinfo</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/series.py:1012,</span> in <span class="ni">Series.__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1009</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1011</span> <span class="k">elif</span> <span class="n">key_is_scalar</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1012</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_value</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1014</span> <span class="k">if</span> <span class="n">is_hashable</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="c1"># Otherwise index.get_value will raise InvalidIndexError</span>
-<span class="g g-Whitespace">   </span><span class="mi">1016</span>     <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1017</span>         <span class="c1"># For labels that don&#39;t resolve as scalars like tuples and frozensets</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/series.py:1121,</span> in <span class="ni">Series._get_value</span><span class="nt">(self, label, takeable)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1118</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1120</span> <span class="c1"># Similar to Index.get_value, but we do not fall back to positional</span>
-<span class="ne">-&gt; </span><span class="mi">1121</span> <span class="n">loc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1123</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">loc</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1124</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3654,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3652</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3653</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3654</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3655</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3656</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3657</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3658</span>     <span class="c1">#  the TypeError.</span>
-<span class="g g-Whitespace">   </span><span class="mi">3659</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-
-<span class="ne">KeyError</span>: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 382 rows containing missing values.
+/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 1 rows containing missing values.
+/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_text : Removed 1 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/6c2c27d7b3edaade60f7bd7e11d2bc7ee1d69cb890cc9d0ceeb05f80fea17734.png" src="_images/6c2c27d7b3edaade60f7bd7e11d2bc7ee1d69cb890cc9d0ceeb05f80fea17734.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8727446937073)&gt;
 </pre></div>
 </div>
 </div>
@@ -1679,144 +1150,13 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3652,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3651</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3652</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3653</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:147,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:176,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:2606,</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
-
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:2630,</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
-
-<span class="ne">KeyError</span>: 0
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/core/formatters.py:708,</span> in <span class="ni">PlainTextFormatter.__call__</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="n">printer</span> <span class="o">=</span> <span class="n">pretty</span><span class="o">.</span><span class="n">RepresentationPrinter</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>     <span class="bp">self</span><span class="o">.</span><span class="n">max_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">newline</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">max_seq_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_seq_length</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">singleton_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">singleton_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">type_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">deferred_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">deferred_printers</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">708</span> <span class="n">printer</span><span class="o">.</span><span class="n">pretty</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span> <span class="n">printer</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span> <span class="k">return</span> <span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:410,</span> in <span class="ni">RepresentationPrinter.pretty</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">407</span>                         <span class="k">return</span> <span class="n">meth</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span>                 <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">object</span> \
-<span class="g g-Whitespace">    </span><span class="mi">409</span>                         <span class="ow">and</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__repr__&#39;</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">410</span>                     <span class="k">return</span> <span class="n">_repr_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">412</span>     <span class="k">return</span> <span class="n">_default_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:778,</span> in <span class="ni">_repr_pprint</span><span class="nt">(obj, p, cycle)</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;A pprint that just redirects to the normal repr function.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span> <span class="c1"># Find newlines and replace them with p.break_()</span>
-<span class="ne">--&gt; </span><span class="mi">778</span> <span class="n">output</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">780</span> <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">():</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:95,</span> in <span class="ni">ggplot.__repr__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">95</span>     <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">return</span> <span class="s1">&#39;&lt;ggplot: (</span><span class="si">%d</span><span class="s1">)&gt;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:86,</span> in <span class="ni">ggplot.__str__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">86</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="c1"># Return and empty string so that print(p) is &quot;pretty&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:203,</span> in <span class="ni">ggplot.draw</span><span class="nt">(self, return_ggplot, show)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="bp">self</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span> <span class="k">with</span> <span class="n">plot_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="n">show</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_build</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="c1"># setup</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="n">figure</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_figure</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:292,</span> in <span class="ni">ggplot._build</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">289</span> <span class="n">layers</span><span class="o">.</span><span class="n">compute_aesthetics</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">291</span> <span class="c1"># Transform data using all scales</span>
-<span class="ne">--&gt; </span><span class="mi">292</span> <span class="n">layers</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">294</span> <span class="c1"># Make sure missing (but required) aesthetics are added</span>
-<span class="g g-Whitespace">    </span><span class="mi">295</span> <span class="n">scales</span><span class="o">.</span><span class="n">add_missing</span><span class="p">((</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">))</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:87,</span> in <span class="ni">Layers.transform</span><span class="nt">(self, scales)</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span> <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scales</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">87</span>         <span class="n">l</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">scales</span><span class="o">.</span><span class="n">transform_df</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scales.py:218,</span> in <span class="ni">Scales.transform_df</span><span class="nt">(self, df)</span>
-<span class="g g-Whitespace">    </span><span class="mi">216</span> <span class="c1"># Each scale transforms the columns it understands</span>
-<span class="g g-Whitespace">    </span><span class="mi">217</span> <span class="k">for</span> <span class="n">sc</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">218</span>     <span class="n">df</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="k">return</span> <span class="n">df</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:715,</span> in <span class="ni">scale_continuous.transform_df</span><span class="nt">(self, df)</span>
-<span class="g g-Whitespace">    </span><span class="mi">713</span> <span class="k">for</span> <span class="n">ae</span> <span class="ow">in</span> <span class="n">aesthetics</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">714</span>     <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">715</span>         <span class="n">df</span><span class="p">[</span><span class="n">ae</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">ae</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">717</span> <span class="k">return</span> <span class="n">df</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:724,</span> in <span class="ni">scale_continuous.transform</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">720</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">721</span><span class="sd"> Transform array|series x</span>
-<span class="g g-Whitespace">    </span><span class="mi">722</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">723</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">724</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">725</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/transforms.py:647,</span> in <span class="ni">datetime_trans.transform</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">644</span>     <span class="k">return</span> <span class="p">[]</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">647</span>     <span class="n">tz</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tzinfo</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span>     <span class="n">tz</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">tzinfo</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/series.py:1012,</span> in <span class="ni">Series.__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1009</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1011</span> <span class="k">elif</span> <span class="n">key_is_scalar</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1012</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_value</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1014</span> <span class="k">if</span> <span class="n">is_hashable</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="c1"># Otherwise index.get_value will raise InvalidIndexError</span>
-<span class="g g-Whitespace">   </span><span class="mi">1016</span>     <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1017</span>         <span class="c1"># For labels that don&#39;t resolve as scalars like tuples and frozensets</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/series.py:1121,</span> in <span class="ni">Series._get_value</span><span class="nt">(self, label, takeable)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1118</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1120</span> <span class="c1"># Similar to Index.get_value, but we do not fall back to positional</span>
-<span class="ne">-&gt; </span><span class="mi">1121</span> <span class="n">loc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1123</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">loc</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1124</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_values</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3654,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3652</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3653</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3654</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3655</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3656</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3657</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3658</span>     <span class="c1">#  the TypeError.</span>
-<span class="g g-Whitespace">   </span><span class="mi">3659</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-
-<span class="ne">KeyError</span>: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 382 rows containing missing values.
+/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 1 rows containing missing values.
+/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_text : Removed 1 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/9df9368594b826064045f356c14b40ea85ab4db3d794688dd799d59fd023d8fd.png" src="_images/9df9368594b826064045f356c14b40ea85ab4db3d794688dd799d59fd023d8fd.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8727446807028)&gt;
 </pre></div>
 </div>
 </div>
