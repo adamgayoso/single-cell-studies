@@ -1014,118 +1014,11 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/core/formatters.py:708,</span> in <span class="ni">PlainTextFormatter.__call__</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="n">printer</span> <span class="o">=</span> <span class="n">pretty</span><span class="o">.</span><span class="n">RepresentationPrinter</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>     <span class="bp">self</span><span class="o">.</span><span class="n">max_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">newline</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">max_seq_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_seq_length</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">singleton_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">singleton_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">type_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">deferred_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">deferred_printers</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">708</span> <span class="n">printer</span><span class="o">.</span><span class="n">pretty</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span> <span class="n">printer</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span> <span class="k">return</span> <span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:410,</span> in <span class="ni">RepresentationPrinter.pretty</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">407</span>                         <span class="k">return</span> <span class="n">meth</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span>                 <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">object</span> \
-<span class="g g-Whitespace">    </span><span class="mi">409</span>                         <span class="ow">and</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__repr__&#39;</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">410</span>                     <span class="k">return</span> <span class="n">_repr_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">412</span>     <span class="k">return</span> <span class="n">_default_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:778,</span> in <span class="ni">_repr_pprint</span><span class="nt">(obj, p, cycle)</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;A pprint that just redirects to the normal repr function.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span> <span class="c1"># Find newlines and replace them with p.break_()</span>
-<span class="ne">--&gt; </span><span class="mi">778</span> <span class="n">output</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">780</span> <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">():</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:95,</span> in <span class="ni">ggplot.__repr__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">95</span>     <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">return</span> <span class="s1">&#39;&lt;ggplot: (</span><span class="si">%d</span><span class="s1">)&gt;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:86,</span> in <span class="ni">ggplot.__str__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">86</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="c1"># Return and empty string so that print(p) is &quot;pretty&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:203,</span> in <span class="ni">ggplot.draw</span><span class="nt">(self, return_ggplot, show)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="bp">self</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span> <span class="k">with</span> <span class="n">plot_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="n">show</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_build</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="c1"># setup</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="n">figure</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_figure</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:327,</span> in <span class="ni">ggplot._build</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">324</span>     <span class="n">layers</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">npscales</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">326</span> <span class="c1"># Train coordinate system</span>
-<span class="ne">--&gt; </span><span class="mi">327</span> <span class="n">layout</span><span class="o">.</span><span class="n">setup_panel_params</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span> <span class="c1"># fill in the defaults</span>
-<span class="g g-Whitespace">    </span><span class="mi">330</span> <span class="n">layers</span><span class="o">.</span><span class="n">use_defaults</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/facets/layout.py:180,</span> in <span class="ni">Layout.setup_panel_params</span><span class="nt">(self, coord)</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span>     <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span>
-<span class="ne">--&gt; </span><span class="mi">180</span>     <span class="n">params</span> <span class="o">=</span> <span class="n">coord</span><span class="o">.</span><span class="n">setup_panel_params</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span>         <span class="bp">self</span><span class="o">.</span><span class="n">panel_scales_x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span>         <span class="bp">self</span><span class="o">.</span><span class="n">panel_scales_y</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span>     <span class="bp">self</span><span class="o">.</span><span class="n">panel_params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/coords/coord_cartesian.py:53,</span> in <span class="ni">coord_cartesian.setup_panel_params</span><span class="nt">(self, scale_x, scale_y)</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="n">vs</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="n">coord_limits</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">ranges</span><span class="o">.</span><span class="n">range</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="k">return</span> <span class="n">vs</span>
-<span class="ne">---&gt; </span><span class="mi">53</span> <span class="n">out</span> <span class="o">=</span> <span class="n">NS</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">get_view_limits</span><span class="p">(</span><span class="n">scale_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">limits</span><span class="o">.</span><span class="n">x</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>          <span class="n">y</span><span class="o">=</span><span class="n">get_view_limits</span><span class="p">(</span><span class="n">scale_y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">limits</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="k">return</span> <span class="n">out</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/coords/coord_cartesian.py:50,</span> in <span class="ni">coord_cartesian.setup_panel_params.&lt;locals&gt;.get_view_limits</span><span class="nt">(scale, coord_limits)</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">expansion</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">default_expansion</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">expand</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="n">ranges</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">expand_limits</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>     <span class="n">scale</span><span class="o">.</span><span class="n">limits</span><span class="p">,</span> <span class="n">expansion</span><span class="p">,</span> <span class="n">coord_limits</span><span class="p">,</span> <span class="n">identity_trans</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">50</span> <span class="n">vs</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="n">coord_limits</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">ranges</span><span class="o">.</span><span class="n">range</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="k">return</span> <span class="n">vs</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:801,</span> in <span class="ni">scale_continuous.view</span><span class="nt">(self, limits, range)</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span> <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="nb">range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">breaks</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">breaks</span> <span class="o">&lt;=</span> <span class="nb">range</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="n">breaks</span> <span class="o">=</span> <span class="n">breaks</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">801</span> <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_labels</span><span class="p">(</span><span class="n">breaks</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="k">if</span> <span class="n">minor_breaks</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="n">minor_breaks</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:946,</span> in <span class="ni">scale_continuous.get_labels</span><span class="nt">(self, breaks, mask)</span>
-<span class="g g-Whitespace">    </span><span class="mi">944</span>     <span class="k">return</span> <span class="n">waiver</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">945</span> <span class="k">elif</span> <span class="n">is_waive</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">946</span>     <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">breaks</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">947</span> <span class="k">elif</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">948</span>     <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">(</span><span class="n">breaks</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/formatters.py:609,</span> in <span class="ni">date_format.__call__</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">607</span> <span class="c1"># Formatter timezone</span>
-<span class="g g-Whitespace">    </span><span class="mi">608</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tz</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">609</span>     <span class="bp">self</span><span class="o">.</span><span class="n">formatter</span><span class="o">.</span><span class="n">tz</span> <span class="o">=</span> <span class="n">get_timezone</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">611</span> <span class="c1"># The formatter is tied to axes and takes</span>
-<span class="g g-Whitespace">    </span><span class="mi">612</span> <span class="c1"># breaks in ordinal format.</span>
-<span class="g g-Whitespace">    </span><span class="mi">613</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">date2num</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/utils.py:360,</span> in <span class="ni">get_timezone</span><span class="nt">(x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">358</span>     <span class="n">prop</span> <span class="o">=</span> <span class="s2">&quot;zone&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">359</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">360</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unrecognised timezone class </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="vm">__class__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">362</span> <span class="c1"># Consistency check</span>
-<span class="g g-Whitespace">    </span><span class="mi">363</span> <span class="n">tz</span> <span class="o">=</span> <span class="n">ZoneInfo</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">prop</span><span class="p">))</span>
-
-<span class="ne">ValueError</span>: Unrecognised timezone class &lt;class &#39;datetime.timezone&#39;&gt;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 381 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/4a6362f55c5b87ebed2d6217c8c8eebee5412f9e40532667b85bcbcc75e48741.png" src="_images/4a6362f55c5b87ebed2d6217c8c8eebee5412f9e40532667b85bcbcc75e48741.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8726505131758)&gt;
 </pre></div>
 </div>
 </div>
@@ -1148,118 +1041,11 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/core/formatters.py:708,</span> in <span class="ni">PlainTextFormatter.__call__</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="n">printer</span> <span class="o">=</span> <span class="n">pretty</span><span class="o">.</span><span class="n">RepresentationPrinter</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>     <span class="bp">self</span><span class="o">.</span><span class="n">max_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">newline</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">max_seq_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_seq_length</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">singleton_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">singleton_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">type_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">deferred_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">deferred_printers</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">708</span> <span class="n">printer</span><span class="o">.</span><span class="n">pretty</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span> <span class="n">printer</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span> <span class="k">return</span> <span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:410,</span> in <span class="ni">RepresentationPrinter.pretty</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">407</span>                         <span class="k">return</span> <span class="n">meth</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span>                 <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">object</span> \
-<span class="g g-Whitespace">    </span><span class="mi">409</span>                         <span class="ow">and</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__repr__&#39;</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">410</span>                     <span class="k">return</span> <span class="n">_repr_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">412</span>     <span class="k">return</span> <span class="n">_default_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:778,</span> in <span class="ni">_repr_pprint</span><span class="nt">(obj, p, cycle)</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;A pprint that just redirects to the normal repr function.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span> <span class="c1"># Find newlines and replace them with p.break_()</span>
-<span class="ne">--&gt; </span><span class="mi">778</span> <span class="n">output</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">780</span> <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">():</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:95,</span> in <span class="ni">ggplot.__repr__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">95</span>     <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">return</span> <span class="s1">&#39;&lt;ggplot: (</span><span class="si">%d</span><span class="s1">)&gt;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:86,</span> in <span class="ni">ggplot.__str__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">86</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="c1"># Return and empty string so that print(p) is &quot;pretty&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:203,</span> in <span class="ni">ggplot.draw</span><span class="nt">(self, return_ggplot, show)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="bp">self</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span> <span class="k">with</span> <span class="n">plot_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="n">show</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_build</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="c1"># setup</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="n">figure</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_figure</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:327,</span> in <span class="ni">ggplot._build</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">324</span>     <span class="n">layers</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">npscales</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">326</span> <span class="c1"># Train coordinate system</span>
-<span class="ne">--&gt; </span><span class="mi">327</span> <span class="n">layout</span><span class="o">.</span><span class="n">setup_panel_params</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span> <span class="c1"># fill in the defaults</span>
-<span class="g g-Whitespace">    </span><span class="mi">330</span> <span class="n">layers</span><span class="o">.</span><span class="n">use_defaults</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/facets/layout.py:180,</span> in <span class="ni">Layout.setup_panel_params</span><span class="nt">(self, coord)</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span>     <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span>
-<span class="ne">--&gt; </span><span class="mi">180</span>     <span class="n">params</span> <span class="o">=</span> <span class="n">coord</span><span class="o">.</span><span class="n">setup_panel_params</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span>         <span class="bp">self</span><span class="o">.</span><span class="n">panel_scales_x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span>         <span class="bp">self</span><span class="o">.</span><span class="n">panel_scales_y</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span>     <span class="bp">self</span><span class="o">.</span><span class="n">panel_params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/coords/coord_cartesian.py:53,</span> in <span class="ni">coord_cartesian.setup_panel_params</span><span class="nt">(self, scale_x, scale_y)</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="n">vs</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="n">coord_limits</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">ranges</span><span class="o">.</span><span class="n">range</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="k">return</span> <span class="n">vs</span>
-<span class="ne">---&gt; </span><span class="mi">53</span> <span class="n">out</span> <span class="o">=</span> <span class="n">NS</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">get_view_limits</span><span class="p">(</span><span class="n">scale_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">limits</span><span class="o">.</span><span class="n">x</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>          <span class="n">y</span><span class="o">=</span><span class="n">get_view_limits</span><span class="p">(</span><span class="n">scale_y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">limits</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="k">return</span> <span class="n">out</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/coords/coord_cartesian.py:50,</span> in <span class="ni">coord_cartesian.setup_panel_params.&lt;locals&gt;.get_view_limits</span><span class="nt">(scale, coord_limits)</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">expansion</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">default_expansion</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">expand</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="n">ranges</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">expand_limits</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>     <span class="n">scale</span><span class="o">.</span><span class="n">limits</span><span class="p">,</span> <span class="n">expansion</span><span class="p">,</span> <span class="n">coord_limits</span><span class="p">,</span> <span class="n">identity_trans</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">50</span> <span class="n">vs</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="n">coord_limits</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">ranges</span><span class="o">.</span><span class="n">range</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="k">return</span> <span class="n">vs</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:801,</span> in <span class="ni">scale_continuous.view</span><span class="nt">(self, limits, range)</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span> <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="nb">range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">breaks</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">breaks</span> <span class="o">&lt;=</span> <span class="nb">range</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="n">breaks</span> <span class="o">=</span> <span class="n">breaks</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">801</span> <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_labels</span><span class="p">(</span><span class="n">breaks</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="k">if</span> <span class="n">minor_breaks</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="n">minor_breaks</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:946,</span> in <span class="ni">scale_continuous.get_labels</span><span class="nt">(self, breaks, mask)</span>
-<span class="g g-Whitespace">    </span><span class="mi">944</span>     <span class="k">return</span> <span class="n">waiver</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">945</span> <span class="k">elif</span> <span class="n">is_waive</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">946</span>     <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">breaks</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">947</span> <span class="k">elif</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">948</span>     <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">(</span><span class="n">breaks</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/formatters.py:609,</span> in <span class="ni">date_format.__call__</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">607</span> <span class="c1"># Formatter timezone</span>
-<span class="g g-Whitespace">    </span><span class="mi">608</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tz</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">609</span>     <span class="bp">self</span><span class="o">.</span><span class="n">formatter</span><span class="o">.</span><span class="n">tz</span> <span class="o">=</span> <span class="n">get_timezone</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">611</span> <span class="c1"># The formatter is tied to axes and takes</span>
-<span class="g g-Whitespace">    </span><span class="mi">612</span> <span class="c1"># breaks in ordinal format.</span>
-<span class="g g-Whitespace">    </span><span class="mi">613</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">date2num</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/utils.py:360,</span> in <span class="ni">get_timezone</span><span class="nt">(x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">358</span>     <span class="n">prop</span> <span class="o">=</span> <span class="s2">&quot;zone&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">359</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">360</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unrecognised timezone class </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="vm">__class__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">362</span> <span class="c1"># Consistency check</span>
-<span class="g g-Whitespace">    </span><span class="mi">363</span> <span class="n">tz</span> <span class="o">=</span> <span class="n">ZoneInfo</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">prop</span><span class="p">))</span>
-
-<span class="ne">ValueError</span>: Unrecognised timezone class &lt;class &#39;datetime.timezone&#39;&gt;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 381 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/4a6362f55c5b87ebed2d6217c8c8eebee5412f9e40532667b85bcbcc75e48741.png" src="_images/4a6362f55c5b87ebed2d6217c8c8eebee5412f9e40532667b85bcbcc75e48741.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8726504979953)&gt;
 </pre></div>
 </div>
 </div>
@@ -1283,118 +1069,12 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/core/formatters.py:708,</span> in <span class="ni">PlainTextFormatter.__call__</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="n">printer</span> <span class="o">=</span> <span class="n">pretty</span><span class="o">.</span><span class="n">RepresentationPrinter</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>     <span class="bp">self</span><span class="o">.</span><span class="n">max_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">newline</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">max_seq_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_seq_length</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">singleton_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">singleton_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">type_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">deferred_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">deferred_printers</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">708</span> <span class="n">printer</span><span class="o">.</span><span class="n">pretty</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span> <span class="n">printer</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span> <span class="k">return</span> <span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:410,</span> in <span class="ni">RepresentationPrinter.pretty</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">407</span>                         <span class="k">return</span> <span class="n">meth</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span>                 <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">object</span> \
-<span class="g g-Whitespace">    </span><span class="mi">409</span>                         <span class="ow">and</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__repr__&#39;</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">410</span>                     <span class="k">return</span> <span class="n">_repr_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">412</span>     <span class="k">return</span> <span class="n">_default_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:778,</span> in <span class="ni">_repr_pprint</span><span class="nt">(obj, p, cycle)</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;A pprint that just redirects to the normal repr function.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span> <span class="c1"># Find newlines and replace them with p.break_()</span>
-<span class="ne">--&gt; </span><span class="mi">778</span> <span class="n">output</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">780</span> <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">():</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:95,</span> in <span class="ni">ggplot.__repr__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">95</span>     <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">return</span> <span class="s1">&#39;&lt;ggplot: (</span><span class="si">%d</span><span class="s1">)&gt;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:86,</span> in <span class="ni">ggplot.__str__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">86</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="c1"># Return and empty string so that print(p) is &quot;pretty&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:203,</span> in <span class="ni">ggplot.draw</span><span class="nt">(self, return_ggplot, show)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="bp">self</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span> <span class="k">with</span> <span class="n">plot_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="n">show</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_build</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="c1"># setup</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="n">figure</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_figure</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:327,</span> in <span class="ni">ggplot._build</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">324</span>     <span class="n">layers</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">npscales</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">326</span> <span class="c1"># Train coordinate system</span>
-<span class="ne">--&gt; </span><span class="mi">327</span> <span class="n">layout</span><span class="o">.</span><span class="n">setup_panel_params</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span> <span class="c1"># fill in the defaults</span>
-<span class="g g-Whitespace">    </span><span class="mi">330</span> <span class="n">layers</span><span class="o">.</span><span class="n">use_defaults</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/facets/layout.py:180,</span> in <span class="ni">Layout.setup_panel_params</span><span class="nt">(self, coord)</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span>     <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span>
-<span class="ne">--&gt; </span><span class="mi">180</span>     <span class="n">params</span> <span class="o">=</span> <span class="n">coord</span><span class="o">.</span><span class="n">setup_panel_params</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span>         <span class="bp">self</span><span class="o">.</span><span class="n">panel_scales_x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span>         <span class="bp">self</span><span class="o">.</span><span class="n">panel_scales_y</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span>     <span class="bp">self</span><span class="o">.</span><span class="n">panel_params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/coords/coord_cartesian.py:53,</span> in <span class="ni">coord_cartesian.setup_panel_params</span><span class="nt">(self, scale_x, scale_y)</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="n">vs</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="n">coord_limits</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">ranges</span><span class="o">.</span><span class="n">range</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="k">return</span> <span class="n">vs</span>
-<span class="ne">---&gt; </span><span class="mi">53</span> <span class="n">out</span> <span class="o">=</span> <span class="n">NS</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">get_view_limits</span><span class="p">(</span><span class="n">scale_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">limits</span><span class="o">.</span><span class="n">x</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>          <span class="n">y</span><span class="o">=</span><span class="n">get_view_limits</span><span class="p">(</span><span class="n">scale_y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">limits</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="k">return</span> <span class="n">out</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/coords/coord_cartesian.py:50,</span> in <span class="ni">coord_cartesian.setup_panel_params.&lt;locals&gt;.get_view_limits</span><span class="nt">(scale, coord_limits)</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">expansion</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">default_expansion</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">expand</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="n">ranges</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">expand_limits</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>     <span class="n">scale</span><span class="o">.</span><span class="n">limits</span><span class="p">,</span> <span class="n">expansion</span><span class="p">,</span> <span class="n">coord_limits</span><span class="p">,</span> <span class="n">identity_trans</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">50</span> <span class="n">vs</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="n">coord_limits</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">ranges</span><span class="o">.</span><span class="n">range</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="k">return</span> <span class="n">vs</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:801,</span> in <span class="ni">scale_continuous.view</span><span class="nt">(self, limits, range)</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span> <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="nb">range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">breaks</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">breaks</span> <span class="o">&lt;=</span> <span class="nb">range</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="n">breaks</span> <span class="o">=</span> <span class="n">breaks</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">801</span> <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_labels</span><span class="p">(</span><span class="n">breaks</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="k">if</span> <span class="n">minor_breaks</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="n">minor_breaks</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:946,</span> in <span class="ni">scale_continuous.get_labels</span><span class="nt">(self, breaks, mask)</span>
-<span class="g g-Whitespace">    </span><span class="mi">944</span>     <span class="k">return</span> <span class="n">waiver</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">945</span> <span class="k">elif</span> <span class="n">is_waive</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">946</span>     <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">breaks</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">947</span> <span class="k">elif</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">948</span>     <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">(</span><span class="n">breaks</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/formatters.py:609,</span> in <span class="ni">date_format.__call__</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">607</span> <span class="c1"># Formatter timezone</span>
-<span class="g g-Whitespace">    </span><span class="mi">608</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tz</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">609</span>     <span class="bp">self</span><span class="o">.</span><span class="n">formatter</span><span class="o">.</span><span class="n">tz</span> <span class="o">=</span> <span class="n">get_timezone</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">611</span> <span class="c1"># The formatter is tied to axes and takes</span>
-<span class="g g-Whitespace">    </span><span class="mi">612</span> <span class="c1"># breaks in ordinal format.</span>
-<span class="g g-Whitespace">    </span><span class="mi">613</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">date2num</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/utils.py:360,</span> in <span class="ni">get_timezone</span><span class="nt">(x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">358</span>     <span class="n">prop</span> <span class="o">=</span> <span class="s2">&quot;zone&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">359</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">360</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unrecognised timezone class </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="vm">__class__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">362</span> <span class="c1"># Consistency check</span>
-<span class="g g-Whitespace">    </span><span class="mi">363</span> <span class="n">tz</span> <span class="o">=</span> <span class="n">ZoneInfo</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">prop</span><span class="p">))</span>
-
-<span class="ne">ValueError</span>: Unrecognised timezone class &lt;class &#39;datetime.timezone&#39;&gt;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 381 rows containing missing values.
+/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 1 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/47c34424a8b878b2b592e34a0a344f789d5c38891f18bb9194723108d4485338.png" src="_images/47c34424a8b878b2b592e34a0a344f789d5c38891f18bb9194723108d4485338.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8726504898030)&gt;
 </pre></div>
 </div>
 </div>
@@ -1424,118 +1104,13 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/core/formatters.py:708,</span> in <span class="ni">PlainTextFormatter.__call__</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="n">printer</span> <span class="o">=</span> <span class="n">pretty</span><span class="o">.</span><span class="n">RepresentationPrinter</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>     <span class="bp">self</span><span class="o">.</span><span class="n">max_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">newline</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">max_seq_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_seq_length</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">singleton_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">singleton_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">type_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">deferred_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">deferred_printers</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">708</span> <span class="n">printer</span><span class="o">.</span><span class="n">pretty</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span> <span class="n">printer</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span> <span class="k">return</span> <span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:410,</span> in <span class="ni">RepresentationPrinter.pretty</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">407</span>                         <span class="k">return</span> <span class="n">meth</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span>                 <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">object</span> \
-<span class="g g-Whitespace">    </span><span class="mi">409</span>                         <span class="ow">and</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__repr__&#39;</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">410</span>                     <span class="k">return</span> <span class="n">_repr_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">412</span>     <span class="k">return</span> <span class="n">_default_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:778,</span> in <span class="ni">_repr_pprint</span><span class="nt">(obj, p, cycle)</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;A pprint that just redirects to the normal repr function.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span> <span class="c1"># Find newlines and replace them with p.break_()</span>
-<span class="ne">--&gt; </span><span class="mi">778</span> <span class="n">output</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">780</span> <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">():</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:95,</span> in <span class="ni">ggplot.__repr__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">95</span>     <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">return</span> <span class="s1">&#39;&lt;ggplot: (</span><span class="si">%d</span><span class="s1">)&gt;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:86,</span> in <span class="ni">ggplot.__str__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">86</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="c1"># Return and empty string so that print(p) is &quot;pretty&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:203,</span> in <span class="ni">ggplot.draw</span><span class="nt">(self, return_ggplot, show)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="bp">self</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span> <span class="k">with</span> <span class="n">plot_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="n">show</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_build</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="c1"># setup</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="n">figure</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_figure</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:327,</span> in <span class="ni">ggplot._build</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">324</span>     <span class="n">layers</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">npscales</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">326</span> <span class="c1"># Train coordinate system</span>
-<span class="ne">--&gt; </span><span class="mi">327</span> <span class="n">layout</span><span class="o">.</span><span class="n">setup_panel_params</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span> <span class="c1"># fill in the defaults</span>
-<span class="g g-Whitespace">    </span><span class="mi">330</span> <span class="n">layers</span><span class="o">.</span><span class="n">use_defaults</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/facets/layout.py:180,</span> in <span class="ni">Layout.setup_panel_params</span><span class="nt">(self, coord)</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span>     <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span>
-<span class="ne">--&gt; </span><span class="mi">180</span>     <span class="n">params</span> <span class="o">=</span> <span class="n">coord</span><span class="o">.</span><span class="n">setup_panel_params</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span>         <span class="bp">self</span><span class="o">.</span><span class="n">panel_scales_x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span>         <span class="bp">self</span><span class="o">.</span><span class="n">panel_scales_y</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span>     <span class="bp">self</span><span class="o">.</span><span class="n">panel_params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/coords/coord_cartesian.py:53,</span> in <span class="ni">coord_cartesian.setup_panel_params</span><span class="nt">(self, scale_x, scale_y)</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="n">vs</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="n">coord_limits</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">ranges</span><span class="o">.</span><span class="n">range</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="k">return</span> <span class="n">vs</span>
-<span class="ne">---&gt; </span><span class="mi">53</span> <span class="n">out</span> <span class="o">=</span> <span class="n">NS</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">get_view_limits</span><span class="p">(</span><span class="n">scale_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">limits</span><span class="o">.</span><span class="n">x</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>          <span class="n">y</span><span class="o">=</span><span class="n">get_view_limits</span><span class="p">(</span><span class="n">scale_y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">limits</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="k">return</span> <span class="n">out</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/coords/coord_cartesian.py:50,</span> in <span class="ni">coord_cartesian.setup_panel_params.&lt;locals&gt;.get_view_limits</span><span class="nt">(scale, coord_limits)</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">expansion</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">default_expansion</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">expand</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="n">ranges</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">expand_limits</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>     <span class="n">scale</span><span class="o">.</span><span class="n">limits</span><span class="p">,</span> <span class="n">expansion</span><span class="p">,</span> <span class="n">coord_limits</span><span class="p">,</span> <span class="n">identity_trans</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">50</span> <span class="n">vs</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="n">coord_limits</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">ranges</span><span class="o">.</span><span class="n">range</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="k">return</span> <span class="n">vs</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:801,</span> in <span class="ni">scale_continuous.view</span><span class="nt">(self, limits, range)</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span> <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="nb">range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">breaks</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">breaks</span> <span class="o">&lt;=</span> <span class="nb">range</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="n">breaks</span> <span class="o">=</span> <span class="n">breaks</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">801</span> <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_labels</span><span class="p">(</span><span class="n">breaks</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="k">if</span> <span class="n">minor_breaks</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="n">minor_breaks</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:946,</span> in <span class="ni">scale_continuous.get_labels</span><span class="nt">(self, breaks, mask)</span>
-<span class="g g-Whitespace">    </span><span class="mi">944</span>     <span class="k">return</span> <span class="n">waiver</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">945</span> <span class="k">elif</span> <span class="n">is_waive</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">946</span>     <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">breaks</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">947</span> <span class="k">elif</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">948</span>     <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">(</span><span class="n">breaks</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/formatters.py:609,</span> in <span class="ni">date_format.__call__</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">607</span> <span class="c1"># Formatter timezone</span>
-<span class="g g-Whitespace">    </span><span class="mi">608</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tz</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">609</span>     <span class="bp">self</span><span class="o">.</span><span class="n">formatter</span><span class="o">.</span><span class="n">tz</span> <span class="o">=</span> <span class="n">get_timezone</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">611</span> <span class="c1"># The formatter is tied to axes and takes</span>
-<span class="g g-Whitespace">    </span><span class="mi">612</span> <span class="c1"># breaks in ordinal format.</span>
-<span class="g g-Whitespace">    </span><span class="mi">613</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">date2num</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/utils.py:360,</span> in <span class="ni">get_timezone</span><span class="nt">(x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">358</span>     <span class="n">prop</span> <span class="o">=</span> <span class="s2">&quot;zone&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">359</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">360</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unrecognised timezone class </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="vm">__class__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">362</span> <span class="c1"># Consistency check</span>
-<span class="g g-Whitespace">    </span><span class="mi">363</span> <span class="n">tz</span> <span class="o">=</span> <span class="n">ZoneInfo</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">prop</span><span class="p">))</span>
-
-<span class="ne">ValueError</span>: Unrecognised timezone class &lt;class &#39;datetime.timezone&#39;&gt;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 381 rows containing missing values.
+/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 1 rows containing missing values.
+/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_text : Removed 1 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/0203ff8fab7a61abb8661cddedf6c399508895f34c432243913d4865dd8056e0.png" src="_images/0203ff8fab7a61abb8661cddedf6c399508895f34c432243913d4865dd8056e0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8726504792311)&gt;
 </pre></div>
 </div>
 </div>
@@ -1575,118 +1150,13 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/core/formatters.py:708,</span> in <span class="ni">PlainTextFormatter.__call__</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="n">printer</span> <span class="o">=</span> <span class="n">pretty</span><span class="o">.</span><span class="n">RepresentationPrinter</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>     <span class="bp">self</span><span class="o">.</span><span class="n">max_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">newline</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">max_seq_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_seq_length</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">singleton_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">singleton_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">type_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">deferred_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">deferred_printers</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">708</span> <span class="n">printer</span><span class="o">.</span><span class="n">pretty</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span> <span class="n">printer</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span> <span class="k">return</span> <span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:410,</span> in <span class="ni">RepresentationPrinter.pretty</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">407</span>                         <span class="k">return</span> <span class="n">meth</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span>                 <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">object</span> \
-<span class="g g-Whitespace">    </span><span class="mi">409</span>                         <span class="ow">and</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__repr__&#39;</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">410</span>                     <span class="k">return</span> <span class="n">_repr_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">412</span>     <span class="k">return</span> <span class="n">_default_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/lib/pretty.py:778,</span> in <span class="ni">_repr_pprint</span><span class="nt">(obj, p, cycle)</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;A pprint that just redirects to the normal repr function.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span> <span class="c1"># Find newlines and replace them with p.break_()</span>
-<span class="ne">--&gt; </span><span class="mi">778</span> <span class="n">output</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">780</span> <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">():</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:95,</span> in <span class="ni">ggplot.__repr__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">95</span>     <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">return</span> <span class="s1">&#39;&lt;ggplot: (</span><span class="si">%d</span><span class="s1">)&gt;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:86,</span> in <span class="ni">ggplot.__str__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span><span class="sd">     Print/show the plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">86</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="c1"># Return and empty string so that print(p) is &quot;pretty&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:203,</span> in <span class="ni">ggplot.draw</span><span class="nt">(self, return_ggplot, show)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="bp">self</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span> <span class="k">with</span> <span class="n">plot_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="n">show</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_build</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="c1"># setup</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="n">figure</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_figure</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/ggplot.py:327,</span> in <span class="ni">ggplot._build</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">324</span>     <span class="n">layers</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">npscales</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">326</span> <span class="c1"># Train coordinate system</span>
-<span class="ne">--&gt; </span><span class="mi">327</span> <span class="n">layout</span><span class="o">.</span><span class="n">setup_panel_params</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span> <span class="c1"># fill in the defaults</span>
-<span class="g g-Whitespace">    </span><span class="mi">330</span> <span class="n">layers</span><span class="o">.</span><span class="n">use_defaults</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/facets/layout.py:180,</span> in <span class="ni">Layout.setup_panel_params</span><span class="nt">(self, coord)</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span>     <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span>
-<span class="ne">--&gt; </span><span class="mi">180</span>     <span class="n">params</span> <span class="o">=</span> <span class="n">coord</span><span class="o">.</span><span class="n">setup_panel_params</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span>         <span class="bp">self</span><span class="o">.</span><span class="n">panel_scales_x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span>         <span class="bp">self</span><span class="o">.</span><span class="n">panel_scales_y</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span>     <span class="bp">self</span><span class="o">.</span><span class="n">panel_params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/coords/coord_cartesian.py:53,</span> in <span class="ni">coord_cartesian.setup_panel_params</span><span class="nt">(self, scale_x, scale_y)</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="n">vs</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="n">coord_limits</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">ranges</span><span class="o">.</span><span class="n">range</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="k">return</span> <span class="n">vs</span>
-<span class="ne">---&gt; </span><span class="mi">53</span> <span class="n">out</span> <span class="o">=</span> <span class="n">NS</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">get_view_limits</span><span class="p">(</span><span class="n">scale_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">limits</span><span class="o">.</span><span class="n">x</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>          <span class="n">y</span><span class="o">=</span><span class="n">get_view_limits</span><span class="p">(</span><span class="n">scale_y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">limits</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="k">return</span> <span class="n">out</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/coords/coord_cartesian.py:50,</span> in <span class="ni">coord_cartesian.setup_panel_params.&lt;locals&gt;.get_view_limits</span><span class="nt">(scale, coord_limits)</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">expansion</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">default_expansion</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">expand</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="n">ranges</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">expand_limits</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>     <span class="n">scale</span><span class="o">.</span><span class="n">limits</span><span class="p">,</span> <span class="n">expansion</span><span class="p">,</span> <span class="n">coord_limits</span><span class="p">,</span> <span class="n">identity_trans</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">50</span> <span class="n">vs</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="n">coord_limits</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">ranges</span><span class="o">.</span><span class="n">range</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="k">return</span> <span class="n">vs</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:801,</span> in <span class="ni">scale_continuous.view</span><span class="nt">(self, limits, range)</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span> <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="nb">range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">breaks</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">breaks</span> <span class="o">&lt;=</span> <span class="nb">range</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="n">breaks</span> <span class="o">=</span> <span class="n">breaks</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">801</span> <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_labels</span><span class="p">(</span><span class="n">breaks</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="k">if</span> <span class="n">minor_breaks</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="n">minor_breaks</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/scales/scale.py:946,</span> in <span class="ni">scale_continuous.get_labels</span><span class="nt">(self, breaks, mask)</span>
-<span class="g g-Whitespace">    </span><span class="mi">944</span>     <span class="k">return</span> <span class="n">waiver</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">945</span> <span class="k">elif</span> <span class="n">is_waive</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">946</span>     <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">breaks</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">947</span> <span class="k">elif</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">948</span>     <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">(</span><span class="n">breaks</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/formatters.py:609,</span> in <span class="ni">date_format.__call__</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">607</span> <span class="c1"># Formatter timezone</span>
-<span class="g g-Whitespace">    </span><span class="mi">608</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tz</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">609</span>     <span class="bp">self</span><span class="o">.</span><span class="n">formatter</span><span class="o">.</span><span class="n">tz</span> <span class="o">=</span> <span class="n">get_timezone</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">611</span> <span class="c1"># The formatter is tied to axes and takes</span>
-<span class="g g-Whitespace">    </span><span class="mi">612</span> <span class="c1"># breaks in ordinal format.</span>
-<span class="g g-Whitespace">    </span><span class="mi">613</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">date2num</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/mizani/utils.py:360,</span> in <span class="ni">get_timezone</span><span class="nt">(x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">358</span>     <span class="n">prop</span> <span class="o">=</span> <span class="s2">&quot;zone&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">359</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">360</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unrecognised timezone class </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="vm">__class__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">362</span> <span class="c1"># Consistency check</span>
-<span class="g g-Whitespace">    </span><span class="mi">363</span> <span class="n">tz</span> <span class="o">=</span> <span class="n">ZoneInfo</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">prop</span><span class="p">))</span>
-
-<span class="ne">ValueError</span>: Unrecognised timezone class &lt;class &#39;datetime.timezone&#39;&gt;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 381 rows containing missing values.
+/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_point : Removed 1 rows containing missing values.
+/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/plotnine/layer.py:411: PlotnineWarning: geom_text : Removed 1 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/03a183e48065d4a44c4a3d75a3c40282dfa73673df610df497f5aec7fc7213e2.png" src="_images/03a183e48065d4a44c4a3d75a3c40282dfa73673df610df497f5aec7fc7213e2.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8726504699639)&gt;
 </pre></div>
 </div>
 </div>
