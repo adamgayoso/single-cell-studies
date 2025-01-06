@@ -92,7 +92,7 @@ File [0;32m/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/p
 [1;32m    265[0m [38;5;124;03mLazy-import wrapper for stdlib urlopen, as that imports a big chunk of[39;00m
 [1;32m    266[0m [38;5;124;03mthe stdlib.[39;00m
 [1;32m    267[0m [38;5;124;03m"""[39;00m
-[1;32m    268[0m [38;5;28;01mimport[39;00m [38;5;21;01murllib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mrequest[39;00m
+[1;32m    268[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01murllib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mrequest[39;00m
 [0;32m--> 270[0m [38;5;28;01mreturn[39;00m [43murllib[49m[38;5;241;43m.[39;49m[43mrequest[49m[38;5;241;43m.[39;49m[43murlopen[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
 
 File [0;32m/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/urllib/request.py:222[0m, in [0;36murlopen[0;34m(url, data, timeout, cafile, capath, cadefault, context)[0m
@@ -127,7 +127,7 @@ File [0;32m/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/urllib/request.
 [1;32m    504[0m         [38;5;28;01mreturn[39;00m result
 
 File [0;32m/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/urllib/request.py:649[0m, in [0;36mHTTPDefaultErrorHandler.http_error_default[0;34m(self, req, fp, code, msg, hdrs)[0m
-[1;32m    648[0m [38;5;28;01mdef[39;00m [38;5;21mhttp_error_default[39m([38;5;28mself[39m, req, fp, code, msg, hdrs):
+[1;32m    648[0m [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21mhttp_error_default[39m([38;5;28mself[39m, req, fp, code, msg, hdrs):
 [0;32m--> 649[0m     [38;5;28;01mraise[39;00m HTTPError(req[38;5;241m.[39mfull_url, code, msg, hdrs, fp)
 
 [0;31mHTTPError[0m: HTTP Error 403: Forbidden
